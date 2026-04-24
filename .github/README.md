@@ -13,22 +13,20 @@
 
 **Empowering ASHA workers with a free, offline-capable anemia screening tool that delivers results in under 5 minutes.**
 
-[Live Demo](#) · [Report Bug](../../issues) · [Request Feature](../../issues) · [Contributing](#-contributing)
-
----
+[Live Demo](https://argoya-assam.vercel.app/) · [Report Bug]() · [Request Feature]() · [Contributing](#-contributing)
 
 <!-- HERO SCREENSHOT -->
 <!-- 📸 Add your hero screenshot below -->
-<img src="" alt="Arogya Assam Hero" width="800"/>
+<!-- <img src="" alt="Arogya Assam Hero" width="800"/> -->
 
 <!-- Replace the src with your actual screenshot path, e.g.: -->
 <!-- <img src="public/screenshots/hero.png" alt="Arogya Assam Hero" width="800"/> -->
 
-</div>
+<!-- </div> -->
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [About The Project](#-about-the-project)
 - [The Problem](#-the-problem)
@@ -49,17 +47,17 @@
 
 ---
 
-## 🏥 About The Project
+## About The Project
 
 **Arogya Assam** is a healthcare platform built to tackle the silent crisis of anemia in rural Assam, India. Designed for **ASHA (Accredited Social Health Activist) workers**, it provides a WHO-aligned symptom-based screening tool accessible from any smartphone — **no internet required for screening**.
 
 Patients can also locate nearby hospitals using pincode-based search powered by OpenStreetMap, and access their results through a secure, authenticated portal.
 
-> 🎯 **Mission**: Make anemia screening accessible, free, and fast for every village in Assam.
+> **Mission**: Make anemia screening accessible, free, and fast for every village in Assam.
 
 ---
 
-## 🔴 The Problem
+## The Problem
 
 | Statistic | Detail |
 |-----------|--------|
@@ -72,48 +70,48 @@ Traditional screening requires blood tests, lab equipment, and trained technicia
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
 
 ### Landing Page
 <!-- 📸 Add screenshot -->
-<img src="" alt="Landing Page" width="700"/>
+<img src="./Assets/Landing_Page.png" alt="Landing Page" width="700"/>
 
 ### Anemia Screening Tool
 <!-- 📸 Add screenshot -->
-<img src="" alt="Screening Tool" width="700"/>
+<img src="./Assets/Screening_Tool.png" alt="Screening Tool" width="700"/>
 
 ### Hospital Finder
 <!-- 📸 Add screenshot -->
-<img src="" alt="Hospital Finder" width="700"/>
+<img src="./Assets/Hospital_Finder.png" alt="Hospital Finder" width="700"/>
 
 ### Authentication
 <!-- 📸 Add screenshot -->
 | Sign In | Sign Up |
 |---------|---------|
-| <img src="" alt="Sign In" width="350"/> | <img src="" alt="Sign Up" width="350"/> |
+| <img src="./Assets/Sign_In.png" alt="Sign In" width="350"/> | <img src="./Assets/Sign_Up.png" alt="Sign Up" width="350"/> |
 
 ### Mobile View
 <!-- 📸 Add screenshot -->
 | Home | Screening | Results |
 |------|-----------|---------|
-| <img src="" alt="Mobile Home" width="220"/> | <img src="" alt="Mobile Screening" width="220"/> | <img src="" alt="Mobile Results" width="220"/> |
+| <img src="./Assets/Mobile_Home.jpg" alt="Mobile Home" width="220"/> | <img src="./Assets/Mobile_Screening.jpg" alt="Mobile Screening" width="220"/> | <img src="./Assets/Mobile_Results.jpg" alt="Mobile Results" width="220"/> |
 
 </div>
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                         CLIENT (Browser)                        │
 │                                                                 │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌───────────────┐   │
-│  │ Landing  │  │ Screening│  │   Auth   │  │   Hospital    │   │
-│  │  Page    │  │   Tool   │  │  Pages   │  │   Finder      │   │
-│  └──────────┘  └──────────┘  └──────────┘  └───────────────┘   │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌───────────────┐    │
+│  │ Landing  │  │ Screening│  │   Auth   │  │   Hospital    │    │
+│  │  Page    │  │   Tool   │  │  Pages   │  │   Finder      │    │
+│  └──────────┘  └──────────┘  └──────────┘  └───────────────┘    │
 │       │              │             │               │            │
 └───────┼──────────────┼─────────────┼───────────────┼────────────┘
         │              │             │               │
@@ -122,29 +120,29 @@ Traditional screening requires blood tests, lab equipment, and trained technicia
 │                      NEXT.JS 16 SERVER                          │
 │                                                                 │
 │  ┌─────────────────────────────────────────────────────────┐    │
-│  │                    Middleware Layer                       │    │
-│  │            (Route Protection & Auth Guards)               │    │
+│  │                    Middleware Layer                     │    │
+│  │            (Route Protection & Auth Guards)             │    │
 │  └─────────────────────────────────────────────────────────┘    │
-│                              │                                   │
-│  ┌──────────────┐  ┌────────┴────────┐  ┌──────────────────┐   │
-│  │  Better Auth │  │   API Routes    │  │  Server Actions  │   │
-│  │   Handler    │  │  /api/auth/*    │  │                  │   │
-│  └──────┬───────┘  └────────┬────────┘  └────────┬─────────┘   │
-│         │                   │                     │              │
-└─────────┼───────────────────┼─────────────────────┼──────────────┘
+│                              │                                  │
+│  ┌──────────────┐  ┌────────┴────────┐  ┌──────────────────┐    │
+│  │  Better Auth │  │   API Routes    │  │  Server Actions  │    │
+│  │   Handler    │  │  /api/auth/*    │  │                  │    │
+│  └──────┬───────┘  └────────┬────────┘  └─────────┬────────┘    │
+│         │                   │                     │             │
+└─────────┼───────────────────┼─────────────────────┼─────────────┘
           │                   │                     │
           ▼                   ▼                     ▼
-┌─────────────────┐  ┌───────────────┐  ┌─────────────────────┐
-│   PostgreSQL    │  │  OpenStreetMap│  │   External Auth     │
-│   (Neon DB)     │  │  Nominatim + │  │  ┌───────┐ ┌──────┐ │
-│                 │  │  Overpass API │  │  │Google │ │GitHub│ │
-│  ┌───────────┐  │  └───────────────┘  │  │ OAuth │ │OAuth │ │
-│  │   Users   │  │                     │  └───────┘ └──────┘ │
-│  │ Sessions  │  │  ┌───────────────┐  └─────────────────────┘
-│  │ Accounts  │  │  │    Resend     │
-│  │Verification│ │  │ (Email API)   │
-│  └───────────┘  │  └───────────────┘
-└─────────────────┘
+┌──────────────────┐  ┌───────────────┐  ┌─────────────────────┐
+│   PostgreSQL     │  │  OpenStreetMap│  │   External Auth     │
+│   (Neon DB)      │  │  Nominatim +  │  │  ┌───────┐ ┌──────┐ │
+│                  │  │  Overpass API │  │  │Google │ │GitHub│ │
+│  ┌────────────┐  │  └───────────────┘  │  │ OAuth │ │OAuth │ │
+│  │   Users    │  │                     │  └───────┘ └──────┘ │
+│  │ Sessions   │  │  ┌───────────────┐  └─────────────────────┘
+│  │ Accounts   │  │  │    Resend     │
+│  │Verification│  │  │ (Email API)   │
+│  └────────────┘  │  └───────────────┘
+└──────────────────┘
 ```
 
 ### Request Flow
@@ -153,13 +151,13 @@ Traditional screening requires blood tests, lab equipment, and trained technicia
 User Request
      │
      ▼
-┌──────────┐    ┌──────────────┐    ┌─────────────┐
-│ Next.js  │───▶│  Middleware   │───▶│  Page/API   │
-│  Router  │    │ (Auth Check) │    │   Handler   │
-└──────────┘    └──────────────┘    └──────┬──────┘
-                                           │
-                    ┌──────────────────────┬┘
-                    ▼                      ▼
+┌──────────┐      ┌──────────────┐    ┌─────────────┐
+│ Next.js  │ ───> │  Middleware  │───>│  Page/API   │
+│  Router  │      │ (Auth Check) │    │   Handler   │
+└──────────┘      └──────────────┘    └──────┬──────┘
+                                             │
+                    ┌───────────────────────┬┘
+                    ▼                       ▼
              ┌─────────────┐      ┌──────────────┐
              │  Prisma ORM │      │ OpenStreetMap│
              │  (Database) │      │     APIs     │
@@ -201,7 +199,7 @@ Start Screening
 
 ---
 
-## ⚙ Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -244,20 +242,20 @@ Start Screening
 
 ---
 
-## ✨ Features
+## Features
 
 ### Core Features
 
 | Feature | Description | Status |
 |---------|-------------|--------|
-| 🩺 **Anemia Screening** | 10-question WHO-aligned symptom assessment | ✅ Live |
-| 🌐 **Bilingual Support** | English + Assamese (অসমীয়া) | ✅ Live |
-| 📊 **Risk Scoring** | Clinical scoring algorithm (0-100 scale) | ✅ Live |
-| 🏥 **Hospital Finder** | Pincode-based nearby hospital search | ✅ Live |
-| 🗺 **Navigation** | Google Maps integration for directions | ✅ Live |
-| 🔐 **Authentication** | Email/password + Google & GitHub OAuth | ✅ Live |
-| 📱 **Responsive Design** | Mobile-first UI for smartphone users | ✅ Live |
-| ⚡ **Offline Screening** | Screening works without internet | ✅ Live |
+| **Anemia Screening** | 10-question WHO-aligned symptom assessment | ✅ Live |
+| **Bilingual Support** | English + Assamese (অসমীয়া) | ✅ Live |
+| **Risk Scoring** | Clinical scoring algorithm (0-100 scale) | ✅ Live |
+| **Hospital Finder** | Pincode-based nearby hospital search | ✅ Live |
+| **Navigation** | Google Maps integration for directions | ✅ Live |
+| **Authentication** | Email/password + Google & GitHub OAuth | ✅ Live |
+| **Responsive Design** | Mobile-first UI for smartphone users | ✅ Live |
+| **Offline Screening** | Screening works without internet | ✅ Live |
 
 ### Screening Questions Include
 
@@ -274,7 +272,7 @@ Start Screening
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -288,7 +286,7 @@ Start Screening
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/arogya-assam.git
+git clone https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam.git
 cd arogya-assam
 
 # 2. Install dependencies
@@ -317,7 +315,7 @@ npm start
 
 ---
 
-## 🔑 Environment Variables
+## Environment Variables
 
 Create a `.env` file in the root directory with the following variables:
 
@@ -349,7 +347,7 @@ NEXT_PUBLIC_BETTER_AUTH_URL="http://localhost:3000"
 
 ---
 
-## 🗄 Database Setup
+## Database Setup
 
 ### Schema Overview
 
@@ -407,74 +405,103 @@ npx prisma migrate dev --name init
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 arogya-assam/
-├── app/                          # Next.js App Router
-│   ├── layout.tsx                # Root layout (fonts, theme, providers)
-│   ├── page.tsx                  # Landing page
+├── app/                          
+│   ├── layout.tsx                
+│   ├── favicon.ico                
+│   ├── page.tsx                  
+│   ├── loading.tsx                  
+│   ├── globals.css                  
 │   ├── screen/
-│   │   └── page.tsx              # Anemia screening questionnaire
+│   │   └── page.tsx              
 │   ├── result/
-│   │   └── page.tsx              # Screening results display
+│   │   └── page.tsx              
 │   ├── hospitals/
-│   │   └── page.tsx              # Hospital finder (protected)
+│   │   └── page.tsx              
 │   ├── dashboard/
-│   │   └── page.tsx              # Patient dashboard (protected)
+│   │   └── page.tsx              
 │   ├── signin/
-│   │   └── page.tsx              # Sign in page
+│   │   └── page.tsx              
 │   ├── signup/
-│   │   └── page.tsx              # Sign up page
+│   │   └── page.tsx              
 │   ├── soon/
-│   │   └── page.tsx              # Coming soon page
+│   │   └── page.tsx              
+│   ├── chat/
+│   │   └── page.tsx              
+│   ├── forgot-password/
+│   │   └── page.tsx              
 │   └── api/
 │       └── auth/
-│           └── [...all]/route.ts # Better Auth API handler
+│           └── [...all]/route.ts 
 │
 ├── components/
-│   ├── landing/                  # Landing page components
-│   │   ├── navbar.tsx            # Navigation header
-│   │   ├── hero.tsx              # Hero section
-│   │   ├── problem.tsx           # Problem statement
-│   │   ├── solution.tsx          # Solution showcase
-│   │   ├── faq.tsx               # FAQ accordion
-│   │   └── footer.tsx            # Footer with contact info
-│   └── ui/                       # shadcn/ui components
+│   ├── theme-provider.tsx
+│   ├── landing/                  
+│   │   ├── navbar.tsx            
+│   │   ├── hero.tsx              
+│   │   ├── problem.tsx           
+│   │   ├── solution.tsx          
+│   │   ├── mode-toggle.tsx          
+│   │   ├── faq.tsx               
+│   │   └── footer.tsx            
+│   ├── shared/                  
+│   │   ├── button.tsx               
+│   │   └── design-system.tsx            
+│   ├── layout/                      
+│   │   └── navbar.tsx            
+│   └── ui/                       
 │       ├── button.tsx
 │       ├── card.tsx
 │       ├── input.tsx
 │       └── ...
 │
-├── lib/                          # Utility & config modules
-│   ├── auth.ts                   # Better Auth server config
-│   ├── auth-client.ts            # Better Auth client config
-│   ├── db.ts                     # Prisma client singleton
-│   ├── openstreetmap.ts          # Hospital geolocation API
-│   ├── password.ts               # Bcrypt hash/compare
-│   ├── token.ts                  # Verification token generator
-│   ├── validators.ts             # Zod schemas
-│   └── utils.ts                  # Class name utility
+├── lib/                          
+│   ├── auth.ts                   
+│   ├── auth-client.ts            
+│   ├── db.ts                     
+│   ├── openstreetmap.ts          
+│   ├── password.ts               
+│   ├── token.ts                  
+│   ├── validators.ts             
+│   ├── email.ts             
+│   └── utils.ts                  
 │
 ├── hooks/
-│   └── use-mobile.ts             # Mobile viewport detection
+│   └── use-mobile.ts             
 │
 ├── prisma/
-│   └── schema.prisma             # Database schema
+│   └── schema.prisma             
 │
-├── types/
-│   └── bcrypt.d.ts               # Type declarations
+├── public/
+│   ├── types/
+│   │   └── bcrypt.d.ts
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── icon-192x192.png
+│   ├── icon-512x512.png
+│   ├── manifest.json
+│   └── window.svg  
 │
-├── middleware.ts                  # Route protection middleware
+├── .gitignore
+├── components.json
+├── Contributing.md
+├── eslint.config.mjs
+├── LICENSE
+├── middleware.ts
+├── next.config.ts
+├── package-lock.json
 ├── package.json
-├── tailwind.config.ts
-├── tsconfig.json
-└── next.config.ts                # Next.js config (Turbopack)
+├── postcss.config.mjs
+├── prisma.config.ts
+└── tsconfig.json              
 ```
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 ### Authentication Endpoints
 
@@ -500,16 +527,12 @@ All auth routes are handled by Better Auth at `/api/auth/*`:
 
 ---
 
-## 🤝 Contributing
-
-Contributions make the open-source community an incredible place to learn, inspire, and create. Any contribution you make is **greatly appreciated**.
-
 ### How to Contribute
 
 1. **Fork** the repository
 2. **Clone** your fork
    ```bash
-   git clone https://github.com/<your-username>/arogya-assam.git
+   git clone https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam.git
    ```
 3. **Create** a feature branch
    ```bash
@@ -527,58 +550,17 @@ Contributions make the open-source community an incredible place to learn, inspi
 
 ### Commit Convention
 
-We follow [Conventional Commits](https://www.conventionalcommits.org/):
-
-| Prefix | Usage |
-|--------|-------|
-| `feat:` | New feature |
-| `fix:` | Bug fix |
-| `docs:` | Documentation only |
-| `style:` | Formatting, no code change |
-| `refactor:` | Code refactoring |
-| `test:` | Adding tests |
-| `chore:` | Maintenance tasks |
+[Click Here]() to follow the commit conventions while committing code to this Project.
 
 ### Code Guidelines
 
-- Use **TypeScript** for all new files
-- Follow existing code style and patterns
-- Use **shadcn/ui** for new UI components
-- Write meaningful commit messages
-- Test your changes locally before submitting a PR
-- Keep PRs focused — one feature/fix per PR
+[Click Here]() to read the Code Guidelines before contributing to the codebase.
 
 ---
 
-## 🗺 Feature Roadmap
+## Feature Roadmap
 
-Looking for something to work on? Here are features we'd love help with:
-
-### 🟢 Good First Issues
-- [ ] Add loading skeleton for landing page
-- [ ] Improve form accessibility (ARIA labels)
-- [ ] Add more FAQ questions
-- [ ] Dark mode toggle improvements
-- [ ] Add Assamese translations for hospital finder page
-
-### 🟡 Medium Complexity
-- [ ] **Patient Medical Records** — Store and view screening history
-- [ ] **PDF Report Generation** — Download screening results as PDF
-- [ ] **PWA Support** — Full offline capability with service worker
-- [ ] **SMS Notifications** — Send results via SMS for non-smartphone users
-- [ ] **Admin Dashboard** — Analytics for ASHA workers and health officials
-- [ ] **Multi-language** — Add Hindi, Bengali, and other regional languages
-- [ ] **Screening History Chart** — Recharts-based visualization of past screenings
-
-### 🔴 Advanced Features
-- [ ] **AI Health Assistant** — Chatbot for health queries using LLM
-- [ ] **Telemedicine Chat** — Real-time chat with hospital staff
-- [ ] **Appointment Booking** — Schedule visits with nearby hospitals
-- [ ] **Blood Bank Finder** — Locate blood banks with availability
-- [ ] **Emergency SOS** — One-tap emergency services with location sharing
-- [ ] **ASHA Worker Portal** — Dedicated portal for community health workers
-- [ ] **Government Health API Integration** — Connect with NHA/ABDM APIs
-- [ ] **Wearable Device Integration** — Sync with health monitoring devices
+[Click Here]() to see the features that contributors can work on.
 
 ### Architecture Improvements
 - [ ] Add unit tests (Jest + React Testing Library)
@@ -591,52 +573,30 @@ Looking for something to work on? Here are features we'd love help with:
 
 ---
 
-## 📄 License
+## License
 
 Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
 
-```
-MIT License
-
-Copyright (c) 2025 Arogya Assam
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
 ---
 
-## 📬 Contact
+## Contact
 
 <!-- Update with your actual contact information -->
 
 **Project Maintainer**: Yash Sharma
 
 <!-- Add your links below -->
-<!-- - Twitter: [@yourusername](https://twitter.com/yourusername) -->
-<!-- - LinkedIn: [Your Name](https://linkedin.com/in/yourprofile) -->
-<!-- - Email: your.email@example.com -->
+- Twitter: [@buildwithyash](https://x.com/buildwithyash)
+- LinkedIn: [Yash Sharma](https://www.linkedin.com/in/buildwithyash/)
+- Email: [yashsharmaofficially@gmail.com](mailto:yashsharmaofficially@gmail.com)
 
-**Project Link**: [https://github.com/your-username/arogya-assam](https://github.com/your-username/arogya-assam)
+**Project Link**: [Argoya_Assam](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam)
+
+**Deployed**: [argoya-assam](https://argoya-assam.vercel.app/)
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - [Next.js](https://nextjs.org/) — React framework
 - [Better Auth](https://www.better-auth.com/) — Authentication
@@ -653,8 +613,6 @@ SOFTWARE.
 
 <div align="center">
 
-**Built with ❤️ for the people of Assam**
-
-⭐ Star this repo if you found it useful!
+⭐ **Star this repo if you found it useful!**
 
 </div>
