@@ -16,10 +16,9 @@
 [Live Demo](https://argoya-assam.vercel.app/) · [Report Bug]() · [Request Feature]() · [Contributing](#-contributing)
 
 <!-- HERO SCREENSHOT -->
-<!-- 📸 Add your hero screenshot below -->
+
 <!-- <img src="" alt="Arogya Assam Hero" width="800"/> -->
 
-<!-- Replace the src with your actual screenshot path, e.g.: -->
 <!-- <img src="public/screenshots/hero.png" alt="Arogya Assam Hero" width="800"/> -->
 
 </div>
@@ -28,22 +27,22 @@
 
 ## Table of Contents
 
-- [About The Project](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#about-the-project)
-- [The Problem](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#the-problem)
-- [Screenshots](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#screenshots)
-- [Architecture](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#architecture)
-- [Tech Stack](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#tech-stack)
-- [Features](#-features)
-- [Getting Started](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#features)
-- [Environment Variables](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#environment-variables)
-- [Database Setup](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#database-setup)
-- [Project Structure](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#project-structure)
-- [API Reference](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#api-reference)
-- [Contributing]()
-- [Feature Roadmap](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#feature-roadmap)
+- [About The Project](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#about-the-project)
+- [The Problem](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#the-problem)
+- [Screenshots](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#screenshots)
+- [Architecture](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#architecture)
+- [Tech Stack](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#tech-stack)
+- [Features](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#features)
+- [Getting Started](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#getting-started)
+- [Environment Variables](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#environment-variables)
+- [Database Setup](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#database-setup)
+- [Project Structure](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#project-structure)
+- [API Reference](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#api-reference)
+- [Contributing](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#contributing)
+- [Feature Roadmap](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#feature-roadmap)
 - [License](LICENSE)
-- [Contact](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#contact)
-- [Acknowledgements](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/tree/Bug-Resolve/main-README#acknowledgements)
+- [Contact](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#contact)
+- [Acknowledgements](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam#acknowledgements)
 
 ---
 
@@ -75,25 +74,25 @@ Traditional screening requires blood tests, lab equipment, and trained technicia
 <div align="center">
 
 ### Landing Page
-<!-- 📸 Add screenshot -->
+
 <img src="./Assets/Landing_Page.png" alt="Landing Page" width="700"/>
 
 ### Anemia Screening Tool
-<!-- 📸 Add screenshot -->
+
 <img src="./Assets/Screening_Tool.png" alt="Screening Tool" width="700"/>
 
 ### Hospital Finder
-<!-- 📸 Add screenshot -->
+
 <img src="./Assets/Hospital_Finder.png" alt="Hospital Finder" width="700"/>
 
 ### Authentication
-<!-- 📸 Add screenshot -->
+
 | Sign In | Sign Up |
 |---------|---------|
 | <img src="./Assets/Sign_In.png" alt="Sign In" width="350"/> | <img src="./Assets/Sign_Up.png" alt="Sign Up" width="350"/> |
 
 ### Mobile View
-<!-- 📸 Add screenshot -->
+
 | Home | Screening | Results |
 |------|-----------|---------|
 | <img src="./Assets/Mobile_Home.jpg" alt="Mobile Home" width="220"/> | <img src="./Assets/Mobile_Screening.jpg" alt="Mobile Screening" width="220"/> | <img src="./Assets/Mobile_Results.jpg" alt="Mobile Results" width="220"/> |
@@ -554,17 +553,17 @@ Read the [Contribution Guidelines](https://github.com/YASHSHARMAOFFICIALLY/Argoy
 
 ### Commit Convention
 
-[Click Here](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/blob/Bug-Resolve/main-README/docs/COMMIT_CONVENTION.md) to follow the commit conventions while committing code to this Project.
+[Click Here](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/blob/main/docs/COMMIT_CONVENTION.md) to follow the commit conventions while committing code to this Project.
 
 ### Code Guidelines
 
-[Click Here](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/blob/Bug-Resolve/main-README/docs/CODE_GUIDELINES.md) to read the Code Guidelines before contributing to the codebase.
+[Click Here](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/blob/main/docs/CODE_GUIDELINES.md) to read the Code Guidelines before contributing to the codebase.
 
 ---
 
 ## Feature Roadmap
 
-[Click Here](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/blob/Bug-Resolve/main-README/docs/FEATURE.md) to see the features that contributors can work on.
+[Click Here](https://github.com/YASHSHARMAOFFICIALLY/Argoya_Assam/blob/main/docs/FEATURE.md) to see the features that contributors can work on.
 
 ### Architecture Improvements
 - Add unit tests (Jest + React Testing Library)
@@ -584,8 +583,6 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more informa
 ---
 
 ## Contact
-
-<!-- Update with your actual contact information -->
 
 **Project Maintainer**: Yash Sharma
 
