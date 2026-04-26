@@ -89,7 +89,7 @@ export default function Navbar() {
         <header className="fixed top-0 left-0 right-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container mx-auto px-4">
                 <nav className="flex h-16 items-center justify-between">
-                    <Link href="/" className="flex items-center space-x-2">
+                    <Link href="/" className="flex items-center space-x-2 z-10">
                         <div className="relative w-10 h-10">
                             <Image
                                 src="/logo.png"
@@ -104,8 +104,8 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex md:items-center md:space-x-4">
-                        <div className="flex items-center space-x-1 mr-4">
+                    <div className="hidden md:flex md:items-center md:justify-center flex-1 px-4">
+                        <div className="flex items-center space-x-1">
                             {filteredNavItems.map((item) => (
                                 <Link
                                     key={item.href + item.title}
@@ -120,38 +120,37 @@ export default function Navbar() {
                                 </Link>
                             ))}
                         </div>
+                    </div>
 
-                        <div className="flex items-center space-x-3 border-l pl-4">
-                            <ModeToggle />
-                            {!isPending && (
-                                <>
-                                    {session ? (
-                                        <Button
-                                            variant="ghost"
-                                            onClick={handleLogout}
-                                            className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
-                                        >
-                                            <LogOut className="mr-2 h-4 w-4" />
-                                            Logout
+                    <div className="hidden md:flex md:items-center md:space-x-3 z-10">
+                        <ModeToggle />
+                        {!isPending && (
+                            <>
+                                {session ? (
+                                    <Button
+                                        variant="ghost"
+                                        onClick={handleLogout}
+                                        className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
+                                    >
+                                        <LogOut className="mr-2 h-4 w-4" />
+                                        Logout
+                                    </Button>
+                                ) : (
+                                    <div className="flex items-center space-x-2">
+                                        <Button variant="ghost" onClick={() => router.push("/signup")}>
+                                            Sign Up
                                         </Button>
-                                    ) : (
-                                        <div className="flex items-center space-x-2">
-                                            <Button variant="ghost" onClick={() => router.push("/signup")}>
-                                                Sign Up
-                                            </Button>
-                                            <Button
-                                                className="bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95"
-                                                onClick={() => router.push("/signin")}
-                                            >
-                                                Sign In
-                                                <MoveRight className="ml-2 h-4 w-4" />
-                                            </Button>
-                                        </div>
-                                    )}
-                                </>
-                            )}
-                        </div>
-
+                                        <Button
+                                            className="bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95"
+                                            onClick={() => router.push("/signin")}
+                                        >
+                                            Sign In
+                                            <MoveRight className="ml-2 h-4 w-4" />
+                                        </Button>
+                                    </div>
+                                )}
+                            </>
+                        )}
                     </div>
 
                     {/* Mobile Toggle */}
