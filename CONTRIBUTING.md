@@ -1,227 +1,263 @@
-Alright — now we’re going **next-level (README-quality CONTRIBUTING.md)**.
-This version matches the repo’s **design language, badges, sections, and visual polish** so it *feels like part of the project*, not an add-on.
+# Contributing to Arogya Assam
+
+First of all, thank you for your interest in contributing to **Arogya Assam**!
+
+Arogya Assam is a healthcare platform focused on making anemia screening accessible, fast, and free for rural communities in Assam.
+
+Your contributions help improve healthcare access, support ASHA workers, and make early anemia detection easier for thousands of people.
 
 ---
 
-## 🤝 Contributing to Arogya Assam
-Help us build a real-world healthcare solution for rural India 🇮🇳
+## 📌 Table of Contents
 
-<div align="center">
-
-<div align="center">
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge)](https://github.com/NSoC-2026/Argoya_Assam/issues)
-[![Good First Issues](https://img.shields.io/badge/Good_First_Issues-Available-blue?style=for-the-badge)](https://github.com/NSoC-2026/Argoya_Assam/labels/good%20first%20issue)
-[![NSoC 2026](https://img.shields.io/badge/NSoC-2026-orange?style=for-the-badge)](https://www.nationalsocietyofcoders.in/)
-</div>
-
----
-
-## 🌟 Why Contribute?
-
-Arogya Assam is more than just a project — it's a mission to make **anemia screening accessible, fast, and free** for rural communities.
-
-By contributing, you:
-- 🩺 Help improve rural healthcare access  
-- 🌍 Work on a real-world impactful project  
-- 💻 Gain experience with modern full-stack tech  
-- 🚀 Build a strong open-source profile  
+* Code of Conduct
+* Project Structure
+* How to Contribute
+* Reporting Bugs
+* Suggesting Enhancements
+* Pull Requests
+* Development Setup
+* Coding Guidelines
+* Vision Behind Arogya Assam
 
 ---
 
-## 📋 Table of Contents
+## 🤝 Code of Conduct
 
-- Getting Started
-- Tech Stack
-- Project Setup
-- Project Architecture
-- Contribution Workflow
-- Coding Standards
-- Commit Convention
-- Pull Request Guidelines
-- Issue Reporting
+By participating in this project, you agree to maintain a respectful, inclusive, and collaborative environment.
 
----
+We welcome contributors from all backgrounds.
 
-## ⚙️ Tech Stack
+Please ensure:
 
-<div align="center">
-
-![Next.js](https://img.shields.io/badge/Next.js_16-000?style=flat-square&logo=next.js)
-![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript_5-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=flat-square&logo=prisma&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-
-</div>
+* Respectful communication
+* Constructive feedback
+* Inclusive collaboration
+* Zero tolerance for harassment or discrimination
 
 ---
 
-## 🚀 Getting Started
+## 🏗️ Project Structure
 
-### 1️⃣ Fork & Clone
+The repository is organized as follows:
 
-```bash
-git clone https://github.com/<your-username>/Argoya_Assam.git
-cd Argoya_Assam
+```text
+app/           → Next.js App Router pages and API routes
+components/    → UI components and landing page sections
+lib/           → Utilities, auth, database, validators, helpers
+hooks/         → Custom React hooks
+prisma/        → Prisma schema and database setup
+types/         → TypeScript type definitions
+public/        → Static assets such as images and icons
 ```
 
 ---
 
-## 🛠️ Project Setup
+## 🚀 How to Contribute
 
-### Install dependencies
+There are many ways to contribute:
 
-```bash id="a1"
+* Fix bugs
+* Improve UI/UX
+* Add accessibility improvements
+* Improve Assamese translations
+* Add new features
+* Improve hospital search functionality
+* Optimize performance and offline support
+* Improve documentation
+
+---
+
+## 🐛 Reporting Bugs
+
+If you find a bug, please open an Issue and include:
+
+* Steps to reproduce the issue
+* Expected behavior
+* Actual behavior
+* Screenshots or logs if available
+* Browser, device, and OS details
+
+For authentication or API issues, include:
+
+* Endpoint affected
+* Error message
+* Request payload if possible
+
+---
+
+## 💡 Suggesting Enhancements
+
+Have an idea to improve Arogya Assam?
+
+Open an Issue and describe:
+
+* The feature or improvement
+* Why it matters
+* The impact on users, patients, or ASHA workers
+* A possible implementation approach
+
+We especially welcome ideas related to:
+
+* Rural healthcare access
+* Offline-first functionality
+* Assamese language support
+* Accessibility improvements
+* Screening accuracy
+* Hospital finder enhancements
+* Better patient history tracking
+
+---
+
+## 🔁 Pull Request Workflow
+
+To contribute code:
+
+1. Fork the repository
+2. Clone your fork
+
+```bash
+git clone https://github.com/your-username/arogya-assam.git
+cd arogya-assam
+```
+
+3. Create a new branch
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+4. Make your changes
+5. Commit clearly
+
+```bash
+git commit -m "feat: add screening history chart"
+```
+
+6. Push to your branch
+
+```bash
+git push origin feature/your-feature-name
+```
+
+7. Open a Pull Request
+
+Before submitting your PR, make sure:
+
+* The code works correctly
+* You tested your changes locally
+* Documentation is updated if needed
+* Your PR has a clear title and description
+* You keep PRs focused on a single feature or fix
+
+---
+
+## ⚙️ Development Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/arogya-assam.git
+cd arogya-assam
+```
+
+### 2. Install dependencies
+
+```bash
 npm install
 ```
 
-### Setup environment variables
+### 3. Configure environment variables
 
-```bash id="a2"
-cp .env.example .env
+Create a `.env` file in the root directory:
+
+```env
+DATABASE_URL=your_database_url
+BETTER_AUTH_SECRET=your_secret_key
+BETTER_AUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
 ```
 
-Fill required credentials (DB, OAuth, etc.)
+⚠️ Never commit `.env` files or API credentials.
 
----
+### 4. Set up the database
 
-### 🗄 Database Setup
-
-```bash id="a3"
+```bash
 npx prisma generate
 npx prisma db push
 ```
 
----
+### 5. Run the development server
 
-### ▶️ Run Development Server
-
-```bash id="a4"
+```bash
 npm run dev
 ```
 
-Visit 👉 [http://localhost:3000](http://localhost:3000)
+Open `http://localhost:3000` in your browser.
 
 ---
 
-## 🏗 Project Architecture
+## 🧑‍💻 Coding Guidelines
 
-```id="a5"
-Client (Next.js UI)
-        ↓
-Middleware (Auth Protection)
-        ↓
-API Routes / Server Actions
-        ↓
-Prisma ORM
-        ↓
-PostgreSQL Database
+### TypeScript / Next.js
+
+* Use TypeScript for all new files
+* Prefer functional React components
+* Use App Router conventions
+* Keep components reusable and modular
+* Use meaningful names for files, variables, and functions
+
+### UI / Styling
+
+* Use Tailwind CSS for styling
+* Use shadcn/ui components where possible
+* Ensure responsive mobile-first design
+* Maintain accessibility with proper labels and ARIA attributes
+
+### Backend / API
+
+* Validate inputs with Zod
+* Keep API routes clean and secure
+* Avoid exposing sensitive information in responses
+* Use Prisma for database interactions
+
+### General
+
+* Keep commits small and meaningful
+* Remove unused code and console logs
+* Write descriptive commit messages
+* Test changes before submitting
+
+Examples:
+
+```text
+feat: add Assamese translation for hospital page
+fix: resolve sign in redirect bug
+docs: update installation steps
+refactor: simplify screening score calculation
 ```
 
 ---
 
-## 📁 Key Project Structure
+## 🌍 Vision Behind Arogya Assam
 
-```id="a6"
-app/           → Routes & pages
-components/    → UI components
-lib/           → Core logic (auth, db, APIs)
-hooks/         → Custom hooks
-prisma/        → Database schema
-```
+Arogya Assam is more than just a health app.
 
----
+We aim to:
 
-## 🌿 Contribution Workflow
-
-```mermaid
-graph TD;
-    A[Fork Repo] --> B[Create Branch]
-    B --> C[Make Changes]
-    C --> D[Commit Code]
-    D --> E[Push to GitHub]
-    E --> F[Open Pull Request]
-```
-
-### Steps:
-
-1. Fork the repository
-2. Create a branch
-3. Make changes
-4. Commit & push
-5. Open PR 🚀
+* Improve early anemia detection
+* Support ASHA workers with better tools
+* Reduce dependency on lab-based screening
+* Increase healthcare access in rural communities
+* Make health technology accessible in local languages
 
 ---
 
-## 🧑‍💻 Coding Standards
+## 💛 Final Note
 
-* ✅ Use **TypeScript**
-* ✅ Follow existing structure
-* ✅ Use **shadcn/ui components**
-* ✅ Keep code modular
-* ✅ Write clean & readable code
+Thank you for taking the time to contribute.
 
----
-
-## 📝 Commit Convention
-
-We follow **Conventional Commits**:
-
-```bash id="a7"
-feat: add screening feature
-fix: resolve login bug
-docs: update contributing guide
-```
-
----
-
-## 🔄 Pull Request Guidelines
-
-Before submitting:
-
-* ✔ Project runs locally
-* ✔ Changes are minimal & focused
-* ✔ Issue is linked (`Closes #12`)
-* ✔ Screenshots added (if UI change)
-* ✔ Code follows project standards
-
----
-
-## 🐞 Reporting Issues
-
-Include:
-
-* Problem description
-* Steps to reproduce
-* Expected vs actual behavior
-* Screenshots (if needed)
-
----
-
-## 💡 Contribution Tips
-
-* Start with **good first issues**
-* Follow UI consistency
-* Keep PRs small & clean
-* Add visuals when possible
-
----
-
-## 🙌 Community & Support
-
-Stuck somewhere? Don’t worry!
-
-* Ask in issues
-* Reach out to maintainers
-* Collaborate with other contributors
-
----
-
-<div align="center">
-
-### 🚀 Let’s build something impactful together
-
-**Made with ❤️ for the people of Assam**
-
-</div>
+Every improvement helps make healthcare more accessible for communities across Assam.
