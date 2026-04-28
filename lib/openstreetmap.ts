@@ -23,6 +23,7 @@ interface OverpassResponse {
 export async function getPincodeCoordinate(
     pincode:string
 ):Promise<Coordinate>{
+    try {
      const response = await fetch(
     `https://nominatim.openstreetmap.org/search?postalcode=${pincode}&country=india&format=json`,
     {
@@ -32,21 +33,27 @@ export async function getPincodeCoordinate(
 }
      );
       if (!response.ok) {
-        throw new Error("Failed to geocode pincode");
+        throw new Error("Failed to geocode pincode: ${response.status}");
   }
   const data = await response.json()
   if(!data.length){
-    throw new Error("pincide not found")
+    throw new Error("Pincode not found")
   }return{
     lat: parseFloat(data[0].lat),
     lon: parseFloat(data[0].lon),
-  }
+  };
+} catch (error) {
+  console.error ("Error in getPincodeCoordinate:", error);
+  throw error;
 }
+}
+
 
 export async  function getHospotialsNearby(
     coords:Coordinate,
     radius:number = 5000
 ):Promise<OSMHospital[]>{
+    try {
       const query = `
     [out:json][timeout:25];
     (
@@ -71,6 +78,10 @@ export async  function getHospotialsNearby(
   }
   const data = await response.json() as OverpassResponse;
   return data.elements.filter((el) => el.tags?.name);
+} catch(error) {
+  console.error("Error in getHospitalsNearby: ", error);
+  return[];
+}
 }
 
 
