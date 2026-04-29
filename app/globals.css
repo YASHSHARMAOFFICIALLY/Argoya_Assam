@@ -210,3 +210,24 @@
   background-size: 200% auto;
   animation: shimmer 2.5s linear infinite;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slow,
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-card-pop,
+  .animate-phone-glow,
+  .animate-count-up,
+  .animate-pulse-ring,
+  .animate-shimmer {
+    animation: none !important;
+  }
+
+  .animate-progress {
+    animation: none !important;
+    width: 60%;
+  }
+}

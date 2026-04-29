@@ -26,11 +26,11 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* ── Left Column ── */}
-          <div className="text-neutral-900 space-y-8">
+          <div className="text-white space-y-8">
 
             {/* Badge */}
             <div
-              className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-gray-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold animate-fade-in"
+              className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-white px-4 py-2 rounded-full text-sm font-semibold animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
@@ -54,7 +54,7 @@ export default function Hero() {
 
             {/* Subheading */}
             <p
-              className="text-lg md:text-xl text-neutral-900 leading-relaxed max-w-2xl dark:text-white animate-fade-in"
+              className="text-lg md:text-xl text-white leading-relaxed max-w-2xl animate-fade-in"
               style={{ animationDelay: "0.4s" }}
             >
               Empowering ASHA workers in rural Assam with a{" "}
@@ -89,7 +89,7 @@ export default function Hero() {
 
             {/* Trust Indicators */}
             <div
-              className="flex flex-wrap items-center gap-6 pt-4 text-sm text-neutral-900 dark:text-white animate-fade-in"
+              className="flex flex-wrap items-center gap-6 pt-4 text-sm text-white animate-fade-in"
               style={{ animationDelay: "0.95s" }}
             >
               {["WHO Guidelines", "NFHS-5 Data", "Assam-First"].map((label, i) => (
