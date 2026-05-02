@@ -33,7 +33,7 @@ export async function getPincodeCoordinate(
 }
      );
       if (!response.ok) {
-        throw new Error("Failed to geocode pincode: ${response.status}");
+        throw new Error(``Failed to geocode pincode: ${response.status}``);
   }
   const data = await response.json()
   if(!data.length){
