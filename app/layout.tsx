@@ -35,6 +35,10 @@ export const metadata: Metadata = {
   title: "Arogya Assam",
   description: "Screening Endemic Diseases Without Lab Tests",
   manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
