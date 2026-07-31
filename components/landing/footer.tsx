@@ -34,6 +34,14 @@ function LinkedinIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+function YoutubeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 576 512" aria-hidden="true" fill="currentColor" {...props}>
+      <path d="M549.655 124.083c-6.281-23.65-24.813-42.172-48.463-48.453C458.742 64 288 64 288 64S117.258 64 74.808 75.63c-23.65 6.281-42.182 24.803-48.463 48.453C16 166.523 16 256 16 256s0 89.477 10.345 131.917c6.281 23.65 24.813 42.172 48.463 48.453C117.258 448 288 448 288 448s170.742 0 213.192-11.63c23.65-6.281 42.182-24.803 48.463-48.453C560 345.477 560 256 560 256s0-89.477-10.345-131.917zM232 338V174l142 82-142 82z" />
+    </svg>
+  );
+}
+
 function PhoneIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 512 512" aria-hidden="true" fill="currentColor" {...props}>
@@ -60,52 +68,121 @@ function MapMarkerIcon(props: SVGProps<SVGSVGElement>) {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-slate-900 text-white overflow-hidden bg-linear-to-b dark:from-[#0a0f1d] dark:to-[#0a0f1d]">
+    <footer className="relative overflow-hidden bg-slate-950 text-white">
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 h-64 w-64 rounded-full bg-primary-500 blur-3xl" />
-        <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-accent-400 blur-3xl" />
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 h-72 w-72 rounded-full bg-primary-500 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-cyan-500 blur-[140px]" />
+      </div>
+
+      <div className="relative border-b border-white/10 bg-white/[0.02] backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-5">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-500/20 ring-1 ring-primary-500/30">
+                <PhoneIcon className="h-4 w-4 text-primary-300 animate-pulse" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-white">
+                  24/7 Screening Helpline
+                </p>
+                <p className="text-sm text-slate-400">
+                  Call anytime for support, guidance, or emergencies
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 text-sm">
+              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-300">
+                Free Screening
+              </span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-300">
+                100% Offline
+              </span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-300">
+                WHO Inspired
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="relative container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Section */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
+            <div className="flex items-center gap-4">
+              <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white p-2 shadow-xl">
                 <Image
                   src="/logo.png"
                   alt="Arogya Assam Logo"
                   fill
-                  className="object-cover"
+                  className="object-contain p-2"
                 />
               </div>
+
               <div className="flex flex-col">
-                <span className="text-2xl font-bold text-white">
+                <span className="text-2xl font-bold tracking-tight text-white">
                   Arogya Assam
                 </span>
-                <span className="text-xs text-slate-400">
-                  Anemia Screening Platform
+                <span className="text-sm text-slate-400">
+                  Smart Anemia Screening Platform
                 </span>
               </div>
             </div>
 
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Empowering ASHA workers with smartphone-based anemia screening for rural Assam—free, offline, and in 5 minutes.
+            <p className="text-sm leading-relaxed text-slate-400">
+              Empowering ASHA workers and rural communities with fast, smartphone-based anemia screening that works offline and delivers results in minutes.
             </p>
 
-            <div className="flex items-center gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-500 transition-colors">
-                <FacebookIcon className="w-4 h-4" />
+            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+              <p className="mb-2 text-sm font-semibold text-white">
+                Trusted Healthcare Access
+              </p>
+              <p className="text-sm leading-relaxed text-slate-400">
+                Early screening helps reduce severe complications, improve awareness, and support faster treatment in remote areas.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-primary-500 hover:bg-primary-500 hover:text-white"
+              >
+                <FacebookIcon className="h-4 w-4" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-500 transition-colors">
-                <TwitterIcon className="w-4 h-4" />
+
+              <a
+                href="#"
+                aria-label="Twitter"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-sky-500 hover:bg-sky-500 hover:text-white"
+              >
+                <TwitterIcon className="h-4 w-4" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-500 transition-colors">
-                <InstagramIcon className="w-4 h-4" />
+
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-pink-500 hover:bg-pink-500 hover:text-white"
+              >
+                <InstagramIcon className="h-4 w-4" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary-500 transition-colors">
-                <LinkedinIcon className="w-4 h-4" />
+
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-500 hover:text-white"
+              >
+                <LinkedinIcon className="h-4 w-4" />
+              </a>
+
+              <a
+                href="#"
+                aria-label="YouTube"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-red-500 hover:bg-red-500 hover:text-white"
+              >
+                <YoutubeIcon className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -113,19 +190,22 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-white">Quick Links</h3>
-            <ul className="space-y-3">
+
+            <ul className="space-y-4">
               {[
                 { label: "Start Screening", href: "/screen" },
+                { label: "How It Works", href: "/#how-it-works" },
                 { label: "About Anemia", href: "/#problem" },
                 { label: "FAQs", href: "/#faq" },
-                { label: "How It Works", href: "/#problem" },
+                { label: "Success Stories", href: "/#testimonials" },
+                { label: "Contact Support", href: "/#contact" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-2"
+                    className="group flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-primary-400"
                   >
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary-500"></div>
+                    <div className="h-2 w-2 rounded-full bg-primary-500 transition-transform duration-300 group-hover:scale-125" />
                     {item.label}
                   </Link>
                 </li>
@@ -136,19 +216,22 @@ export default function Footer() {
           {/* Resources */}
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-white">Resources</h3>
-            <ul className="space-y-3">
+
+            <ul className="space-y-4">
               {[
                 { label: "Patient Portal", href: "/signin" },
                 { label: "Find Hospitals", href: "/hospitals" },
                 { label: "Health Articles", href: "/chat?name=Health Articles" },
                 { label: "Emergency Services", href: "/#contact" },
+                { label: "ASHA Worker Guide", href: "/guide" },
+                { label: "Nutrition Tips", href: "/nutrition" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-2"
+                    className="group flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-primary-400"
                   >
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary-500"></div>
+                    <div className="h-2 w-2 rounded-full bg-cyan-500 transition-transform duration-300 group-hover:scale-125" />
                     {item.label}
                   </Link>
                 </li>
@@ -156,76 +239,111 @@ export default function Footer() {
             </ul>
           </div>
 
-
           {/* Contact */}
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-white">Get In Touch</h3>
-            <ul className="space-y-4">
-              <li className="flex gap-3 text-sm text-slate-400">
-                <MapMarkerIcon className="w-5 h-5 text-primary-400 shrink-0 mt-0.5" />
-                <span className="leading-relaxed">
-                  Primary Health Center
-                  <br />
-                  Assam, India
-                </span>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-slate-400">
-                <PhoneIcon className="w-5 h-5 text-primary-400 shrink-0" />
-                <a href="tel:+91-800-SCREEN" className="hover:text-primary-400 transition-colors">
-                  +91-800-SCREEN
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-slate-400">
-                <EnvelopeIcon className="w-5 h-5 text-primary-400 shrink-0" />
-                <a
-                  href="mailto:support@anemiascreen.in"
-                  className="hover:text-primary-400 transition-colors"
-                >
-                  support@anemiascreen.in
-                </a>
-              </li>
-            </ul>
+
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:border-primary-500/30 hover:bg-white/[0.05]">
+                <div className="flex gap-3">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-primary-400">
+                    <MapMarkerIcon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">Visit Us</p>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-400">
+                      Primary Health Center
+                      <br />
+                      Rural Assam, India
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:border-primary-500/30 hover:bg-white/[0.05]">
+                <div className="flex gap-3">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-primary-400">
+                    <PhoneIcon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">Call Support</p>
+                    <a
+                      href="tel:+91-800-SCREEN"
+                      className="mt-1 block text-sm text-slate-400 transition-colors hover:text-primary-400"
+                    >
+                      +91-800-SCREEN
+                    </a>
+                    <p className="mt-1 text-xs text-slate-500">
+                      Available 24 hours a day
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:border-primary-500/30 hover:bg-white/[0.05]">
+                <div className="flex gap-3">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-primary-400">
+                    <EnvelopeIcon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">Email Us</p>
+                    <a
+                      href="mailto:support@anemiascreen.in"
+                      className="mt-1 block text-sm text-slate-400 transition-colors hover:text-primary-400"
+                    >
+                      support@anemiascreen.in
+                    </a>
+                    <p className="mt-1 text-xs text-slate-500">
+                      We usually reply within 24 hours
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-slate-400">
-              © {new Date().getFullYear()} Yash Anemia Screening. All rights reserved. | Built for rural healthcare.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6">
+        <div className="mt-16 border-t border-white/10 pt-8">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-sm text-slate-400">
+                © {new Date().getFullYear()} Arogya Assam. All rights reserved.
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                Built to improve healthcare access for rural communities.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-6">
               <Link
-                href="/soon"
-                className="text-sm text-slate-400 hover:text-primary-400 transition-colors"
+                href="/privacy-policy"
+                className="text-sm text-slate-400 transition-colors hover:text-primary-400"
               >
                 Privacy Policy
               </Link>
+
               <Link
-                href="/soon"
-                className="text-sm text-slate-400 hover:text-primary-400 transition-colors"
+                href="/terms-of-service"
+                className="text-sm text-slate-400 transition-colors hover:text-primary-400"
               >
                 Terms of Service
               </Link>
-            </div>
 
-          </div>
-        </div>
-      </div>
+              <Link
+                href="/contact"
+                className="text-sm text-slate-400 transition-colors hover:text-primary-400"
+              >
+                Contact
+              </Link>
 
-      {/* Emergency Banner */}
-      <div className="bg-primary-600 py-3">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center text-white gap-2">
-            <div className="flex items-center gap-3">
-              <PhoneIcon className="h-4 w-4 animate-pulse" />
-              <span className="text-sm font-semibold">
-                24/7 Helpline: +91-800-SCREEN
-              </span>
+              <Link
+                href="/support"
+                className="text-sm text-slate-400 transition-colors hover:text-primary-400"
+              >
+                Support
+              </Link>
             </div>
-            <span className="text-sm hidden sm:block font-medium">
-              Free Screening • 100% Offline • WHO Approved
-            </span>
           </div>
         </div>
       </div>
